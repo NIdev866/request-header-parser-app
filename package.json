@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/NIdev866/request-header-parser-app/issues"
   },
-  "homepage": "https://github.com/NIdev866/request-header-parser-app#readme"
+  "homepage": "https://github.com/NIdev866/request-header-parser-app#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
 }
