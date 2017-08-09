@@ -1,6 +1,10 @@
 const express = require("express")
 const app = express()
 const port = Number(process.env.PORT||8080)
+const expressIpv4 = require("express-ipv4")
+
+//load the IP converting middleware
+app.use(expressIpv4())
 
 app.get("*", (req, res) => {
 
