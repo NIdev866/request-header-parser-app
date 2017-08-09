@@ -3,6 +3,8 @@ const app = express()
 const port = Number(process.env.PORT||8080)
 const requestIp = require('request-ip');
 
+app.set('trust_proxy', 1)
+
 //load the IP converting middleware
 app.use(expressIpv4())
 
