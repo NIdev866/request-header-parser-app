@@ -5,9 +5,6 @@ const requestIp = require('request-ip');
 
 app.set('trust_proxy', 1)
 
-//load the IP converting middleware
-app.use(expressIpv4())
-
 app.get("*", (req, res) => {
 
   const ip = requestIp.getClientIp(req)

@@ -18,7 +18,6 @@
   "homepage": "https://github.com/NIdev866/request-header-parser-app#readme",
   "dependencies": {
     "express": "^4.15.4",
-    "express-ipv4": "0.0.1",
     "request-ip": "^2.0.2"
   }
 }
