@@ -3,12 +3,15 @@ const app = express()
 const port = Number(process.env.PORT||8080)
 const expressIpv4 = require("express-ipv4")
 
+app.set('trust_proxy', 1)
+
 //load the IP converting middleware
 app.use(expressIpv4())
 
 app.get("*", (req, res) => {
 
-  const ip = req.ip
+  //const ip = req.ip
+  const ip = req.headers['x-appengine-user-ip']
   const languageUnedited = req.headers["accept-language"]
   const language = languageUnedited.substring(0, languageUnedited.indexOf(","))
   const softwareUnedited = req.headers["user-agent"]
